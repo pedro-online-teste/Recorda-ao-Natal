@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Mural de Natal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="snowCanvas"></canvas>
+
+    <header>
+        <h1 class="title">Recordação de Natal 2025🎄</h1>
+        <div class="controls">
+            <button class="filter-btn active" onclick="filtrar('todos')">Tudo</button>
+            <button class="filter-btn" onclick="filtrar('foto')">Fotos</button>
+            <button class="filter-btn" onclick="filtrar('video')">Vídeos</button>
+        </div>
+    </header>
+
+    <main class="mural" id="muralContainer">
+        
+        <!-- COPIE E COLE OS BLOCOS ABAIXO PARA ADICIONAR MAIS -->
+
+        <!-- Exemplo de FOTO (Mude o nome do arquivo em 'src') -->
+        <div class="item foto">
+            <div class="polaroid" onclick="abrirModal(this)">
+                <img src="Foto1.jpeg" alt="Natal 2023">
+                <p class="legenda"> Foto de Familia ✨</p>
+            </div>
+
+             <div class="polaroid" onclick="abrirModal(this)">
+                <img src="Foto2.jpeg" alt="Natal 2023">
+                <p class="legenda">Foto de Familia ✨</p>
+            </div>
+            
+        </div>
+
+        <!-- Exemplo de VÍDEO (Mude o nome do arquivo em 'src') -->
+         
+        <div class="item video">
+             <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V-Comida.mp4" muted></video>
+                <p class="legenda">Comida Natal🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V-Completo.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal <br>Completa 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V1.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V2.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V3.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V4.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V5.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V6.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V7.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V8.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V9.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V10.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V11.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+
+            <div class="polaroid" onclick="abrirModal(this)">
+                <video src="V12.mp4" muted></video>
+                <p class="legenda">Brincadeira de Natal 🎥</p>
+            </div>
+        </div>
+        <!-- Adicione mais itens aqui... -->
+
+    </main>
+
+    <!-- Visualizador (Modal) -->
+    <div id="modal" class="modal" onclick="fecharModal()">
+        <span class="fechar">&times;</span>
+        <div class="modal-conteudo" id="modalConteudo"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

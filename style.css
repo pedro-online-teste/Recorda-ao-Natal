@@ -1,0 +1,135 @@
+:root {
+    --verde: #165b33;
+    --vermelho: #bb2528;
+    --dourado: #f8b229;
+    --neve: #f8f9fa;
+}
+
+body {
+    margin: 0;
+    background: #3a2212 url('https://www.transparenttextures.com/patterns/dark-wood.png');
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+
+#snowCanvas {
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.title {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 4.5rem;
+    color: var(--dourado);
+    text-shadow: 3px 3px 0px var(--vermelho);
+    margin: 0 0 30px 0;
+}
+
+/* Filtros */
+.filter-btn {
+    background: var(--verde);
+    border: 2px solid var(--dourado);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--vermelho);
+    transform: scale(1.1);
+}
+
+/* Mural Grid */
+.mural {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 12000px;
+    margin: 0 auto;
+}
+
+/* Polaroid */
+.polaroid {
+    background: white;
+    padding: 15px 15px 35px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: 0.4s;
+    cursor: pointer;
+    position: relative;
+}
+
+.polaroid::before { /* Efeito de fita adesiva */
+    content: "";
+    position: absolute;
+    top: -15px; left: 50%;
+    transform: translateX(-50%);
+    width: 100px; height: 30px;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.item { transition: 0.5s; }
+
+.item.foto .polaroid { transform: rotate(-2deg); }
+.item.video .polaroid { transform: rotate(3deg); }
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05) !important;
+    z-index: 10;
+}
+
+.polaroid img, .polaroid video {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.legenda {
+    color: #333;
+    text-align: center;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 1.6rem;
+    margin: 15px 0 0 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-conteudo img, .modal-conteudo video {
+    max-width: 90vw;
+    max-height: 80vh;
+    border: 5px solid white;
+}
+
+.fechar {
+    position: absolute;
+    top: 20px; right: 40px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
